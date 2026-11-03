@@ -1,0 +1,13 @@
+name: workflow
+on: push
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step
+        run: |
+          echo "Repository: ${{ github.repository }}"
+      echo "Branch: ${{ github.ref_name }}"
+      echo "Commit: ${{ github.sha }}"
+      echo "Event: ${{ github.event_name }}"
+      echo "Triggered by: ${{ github.actor }}"

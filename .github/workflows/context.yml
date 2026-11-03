@@ -1,9 +1,10 @@
 name: workflow
 on:
-  push:
-    paths:
-      - 'README.md'
-      - '.github/workflows/context.yml'
+  workflow_dispatch:
+  #push:
+   # paths:
+   #   - 'README.md'
+   #   - '.github/workflows/context.yml'
 jobs:
   context:
     runs-on: ubuntu-latest

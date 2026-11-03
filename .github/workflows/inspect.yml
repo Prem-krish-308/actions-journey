@@ -1,0 +1,14 @@
+name: trig
+on: push
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check
+        uses: actions/checkout@v4
+      - name: print
+        run: |
+          uname -a
+          ls -a
+      - name: file
+        run: ls | wc -l

@@ -1,5 +1,9 @@
 name: workflow
-on: push
+on:
+  push:
+    paths:
+      - 'README.md'
+      - '.github/workflows/context.yml'
 jobs:
   context:
     runs-on: ubuntu-latest
@@ -11,3 +15,4 @@ jobs:
           echo "Commit: ${{ github.sha }}"
           echo "Event: ${{ github.event_name }}"
           echo "Triggered by: ${{ github.actor }}"
+          echo "runner os: ${{runner.os}}"

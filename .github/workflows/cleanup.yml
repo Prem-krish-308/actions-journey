@@ -1,5 +1,6 @@
 name: trig
-on: push
+on:
+  workflow_dispatch:
 jobs:
   unit:
     runs-on: ubuntu-latest

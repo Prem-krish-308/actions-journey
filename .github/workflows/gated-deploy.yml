@@ -1,5 +1,6 @@
 name: condi
-on: push
+on:
+  workflow_dispatch:
 jobs:
   cond:
     runs-on: ubuntu-latest

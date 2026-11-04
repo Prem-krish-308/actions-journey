@@ -1,9 +1,14 @@
-name: arti
+name: report
 on: push
 jobs:
-  artifact:
+  build:
     runs-on: ubuntu-latest
     steps:
+      - name: Write the report
+        run: |
+          echo "Build report" > report.txt
+          date >> report.txt
+          uname -a >> report.txt
       - name: Upload the report
         uses: actions/upload-artifact@v4
         with:

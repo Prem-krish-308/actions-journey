@@ -1,5 +1,6 @@
 name: env
-on: push
+on:
+  workflow_dispatch:
 env:
   APP_NAME: journey
 jobs:

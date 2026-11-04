@@ -1,0 +1,11 @@
+name: condi
+on: push
+jobs:
+  cond:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run tests
+        run: echo "hey run test"
+      - name: Deploy 
+        if: github.ref == 'refs/heads/main'
+        run: echo "db"

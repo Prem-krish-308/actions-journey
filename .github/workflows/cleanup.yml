@@ -9,5 +9,5 @@ jobs:
       - name: Flaky check
         run: "hey"
       - name: Stop test database
-        if: failure()
+        if: always()
         run: echo "stop test"

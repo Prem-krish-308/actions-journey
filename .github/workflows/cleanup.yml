@@ -1,0 +1,13 @@
+name: trig
+on: push
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start test database
+        run: echo "print"
+      - name: Flaky check
+        run: "hey"
+      - name: Stop test database
+        if: failure()
+        run: echo "stop test"

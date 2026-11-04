@@ -1,5 +1,6 @@
 name: vars
-on: push
+on:
+  workflow_dispatch:
 jobs:
   deployregion:
     runs-on: ubuntu-latest

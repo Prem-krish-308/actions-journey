@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 name: cache
 on: push
 jobs:
   cache:
     runs-on: ubuntu-latest
     steps:
+=======
+name: deps
+on: push
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+>>>>>>> 3b6cccb (cache dep)
       - name: Cache pip downloads
         uses: actions/cache@v4
         with:
@@ -12,4 +23,8 @@ jobs:
           restore-keys: |
             pip-
       - name: Install dependencies
+<<<<<<< HEAD
         run: python3 -m pip install --user -r requirements.txt requirements.txt
+=======
+        run: python3 -m pip install --user -r requirements.txt
+>>>>>>> 3b6cccb (cache dep)
